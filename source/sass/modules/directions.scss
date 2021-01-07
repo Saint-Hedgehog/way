@@ -1,0 +1,164 @@
+.directions {
+  margin-top: -19px;
+  padding-bottom: 120px;
+}
+
+.directions__content {
+  padding-top: 84px;
+}
+
+.directions__list {
+  @include list-reset;
+}
+
+.directions__item {
+  position: relative;
+  display: none;
+  flex-wrap: wrap;
+
+  &--show {
+    display: flex;
+  }
+}
+
+.directions__description {
+  width: 36.45%;
+  min-width: 300px;
+  margin: 0 3.63% 17px 1px;
+}
+
+.directions__title {
+  position: relative;
+  margin: 5px 0 31px;
+  padding-bottom: 17px;
+  font-size: 55px;
+  line-height: 90px;
+  font-weight: 600;
+  color: $black-alt;
+  letter-spacing: -1.245px;
+
+
+  &::before {
+    @include pseudo;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 3px;
+    background-color: $orange;
+  }
+}
+
+.directions__text {
+  margin: 0;
+  margin-bottom: 49px;
+  padding-right: 56px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba($black-alt, 0.7);
+  letter-spacing: -0.466667px;
+}
+
+.directions__button {
+  width: 250px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.directions__feedback {
+  margin-top: -5px;
+}
+
+@media (max-width: 1440px) {
+  .directions__description {
+    margin-right: 8.5%;
+  }
+}
+
+@media (max-width: $desktop) {
+  .directions {
+    margin-top: 33px;
+    padding-bottom: 20px;
+  }
+
+  .directions__content {
+    padding-top: 33px;
+  }
+
+  .directions__title {
+    margin: 0 1px 20px 0;
+    padding-bottom: 0;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: normal;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .directions__item {
+    flex-direction: column;
+  }
+
+  .directions__description {
+    width: auto;
+    margin: 0 0 30px 0;
+  }
+
+  .directions__text {
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+    letter-spacing: -0.466667px;
+  }
+
+  .directions__button {
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .directions__feedback {
+    @include full-width;
+
+    margin-top: 0;
+  }
+}
+
+@media (max-width: $tablet) {
+  .directions {
+    margin-top: 11px;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .directions__content {
+    padding-top: 24px;
+  }
+
+  .directions__item {
+    right: 1px;
+  }
+
+  .directions__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .directions__text {
+    margin-bottom: 19px;
+  }
+
+  .directions__description {
+    min-width: auto;
+    margin-bottom: 50px;
+  }
+
+  .directions__button {
+    width: 288px;
+  }
+}

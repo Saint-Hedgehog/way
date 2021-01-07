@@ -1,0 +1,64 @@
+.callback {
+  padding: 38px 0 30px;
+}
+
+.callback__wrapper {
+  width: 43.9583%;
+  margin-left: 20.156%;
+}
+
+.callback__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 455px;
+  background-color: $orange-lighter;
+  background-image: url("../img/bg/form-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../img/bg/form-bg-desktop@2x.jpg");
+  }
+}
+
+@media (max-width: $desktop) {
+  .callback {
+    padding: 37px 0 30px;
+  }
+
+  .callback__wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .callback__inner {
+    width: 100%;
+    min-height: 456px;
+    justify-content: center;
+    background-image: url("../img/bg/form-bg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/bg/form-bg-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .callback {
+    padding-top: 56px;
+    padding-bottom: 50px;
+    background-color: $modal-inner-bg;
+  }
+
+  .callback__inner {
+    right: 1px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: auto;
+    background-image: none;
+    background-color: $modal-inner-bg;
+  }
+}

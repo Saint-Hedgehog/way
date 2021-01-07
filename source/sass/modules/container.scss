@@ -1,0 +1,17 @@
+.container {
+  @include push--auto;
+
+  width: 61%;
+}
+
+@media (max-width: $desktop) {
+  .container {
+    width: 94.53125%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .container {
+    width: 90%;
+  }
+}

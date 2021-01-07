@@ -1,0 +1,128 @@
+.page-nav {
+  margin: 3px 3.7% 0 auto;
+  max-width: 42.6985%;
+}
+
+.page-nav__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.page-nav__item {
+  position: relative;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-nav__link svg {
+  display: none;
+}
+
+.page-nav__link {
+  @include transition;
+
+  padding: 5px 10px;
+  font-family: $font-main;
+  font-weight: 500;
+  text-decoration: none;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    color: rgba($orange, 0.5);
+  }
+}
+
+@media (max-width: $desktop) {
+  .page-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    display: none;
+    flex-grow: 1;
+    max-width: none;
+    width: 100%;
+    min-height: 518px;
+    margin: 0;
+    padding: 134px 0 50px;
+    background-color: $white;
+
+    &--opened {
+      display: block;
+    }
+  }
+
+  .page-nav__list {
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .page-nav--opened > .page-nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-nav__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    background: $modal-inner-bg;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .page-nav__link {
+    position: relative;
+    display: block;
+    padding: 15px 40px 17px 21px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    color: $grey;
+    letter-spacing: 0.01px;
+  }
+
+  .page-nav__link svg {
+    @include pseudo;
+
+    top: 17px;
+    right: 16px;
+    fill: $black-alt;
+    fill-opacity: 0.5;
+    stroke: none;
+  }
+
+  .page-nav__link:hover svg,
+  .page-nav__link:focus svg {
+    @include transition;
+
+    fill: currentColor;
+  }
+
+  .page-nav__link:active svg {
+    @include transition;
+
+    fill: currentColor;
+  }
+}
+
+@media (max-width: $tablet) {
+  .page-nav__link {
+    padding: 15px 40px 17px 16px;
+  }
+}

@@ -1,0 +1,12 @@
+.bg-container {
+  background-image: url("../img/bg/directions-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 22.7%;
+  background-size: 1443.66px 1088.9px;
+}
+
+@media (max-width: $desktop) {
+  .bg-container {
+    background: none;
+  }
+}

@@ -1,0 +1,178 @@
+.form {
+  width: 656px;
+  min-height: 315px;
+  margin-right: -326px;
+  padding: 50px 49px 40px 50px;
+  background-color: $white;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba($form-shadow, 0.1);
+  border-radius: 5px;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.form__text {
+  margin: 0;
+  margin-bottom: 23px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.form__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.form__wrapper {
+  position: relative;
+  flex-grow: 1;
+  margin: 0;
+  margin-right: 19px;
+  padding: 0;
+  border: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--required::before {
+    content: "*";
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    display: block;
+    font-weight: bold;
+    font-size: 17px;
+    color: $orange;
+  }
+}
+
+.form__input {
+  width: 269px;
+  padding: 16px 13px 15px;
+  color: $grey;
+  border: 1px solid rgba($black-alt, 0.3);
+
+  &--tel {
+    padding-left: 24px;
+  }
+
+  &--invalid {
+    border-color: $orange;
+  }
+
+  &::placeholder {
+    color: $black;
+  }
+
+  &:hover {
+    @include transition;
+    border-color: rgba($black-alt, 0.3);
+    box-shadow: 0 0 0 1px rgba($black-alt, 0.3);
+  }
+
+  &:focus {
+    @include transition;
+    border-color: $grey;
+    box-shadow: 0 0 0 1px $grey;
+  }
+}
+
+.form__button {
+  width: 176px;
+  margin: 0 auto;
+  padding: 17px 20px 18px;
+}
+
+.form__error {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  display: none;
+  height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: $orange;
+
+  &--show {
+    display: block;
+  }
+}
+
+@media (max-width: $desktop) {
+  .form {
+    width: 658px;
+    min-height: 311px;
+    margin: 0;
+    margin-top: -5px;
+    padding: 50px 49px 40px;
+  }
+
+  .form__inner {
+    margin-bottom: 20px;
+  }
+
+  .form__text {
+    margin-bottom: 23px;
+  }
+
+  .form__button {
+    width: 250px;
+    padding-top: 20px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .form {
+    width: 100%;
+    padding: 0;
+    background-color: $modal-inner-bg;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .form__inner {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .form__title {
+    margin-bottom: 20px;
+  }
+
+  .form__text {
+    margin-bottom: 19px;
+  }
+
+  .form__wrapper {
+    margin: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__input {
+    width: 100%;
+  }
+
+  .form__button {
+    width: 100%;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
